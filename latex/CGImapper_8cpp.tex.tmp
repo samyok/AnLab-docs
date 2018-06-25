@@ -1,0 +1,193 @@
+\hypertarget{CGImapper_8cpp}{}\section{C\+G\+Imapper.\+cpp File Reference}
+\label{CGImapper_8cpp}\index{C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/tree\+\_\+policy.\+hpp$>$}\newline
+{\ttfamily \#include $<$ext/pb\+\_\+ds/assoc\+\_\+container.\+hpp$>$}\newline
+Include dependency graph for C\+G\+Imapper.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcpg}{cpg}
+\begin{DoxyCompactList}\small\item\em A C\+PG. \end{DoxyCompactList}\item 
+struct \hyperlink{structcgi}{cgi}
+\begin{DoxyCompactList}\small\item\em A C\+G-\/\+Island. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a9af2de86c4be813e9c60ede438bb4cd7}\label{CGImapper_8cpp_a9af2de86c4be813e9c60ede438bb4cd7}} 
+\#define {\bfseries F\+OR}(i,  a,  b)~for (int i=a; i$<$(b); i++)
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a598ee43ca4ac31c5f4a1d43be1b540a3}\label{CGImapper_8cpp_a598ee43ca4ac31c5f4a1d43be1b540a3}} 
+\#define {\bfseries F0R}(i,  a)~for (int i=0; i$<$(a); i++)
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a0191a6cd20c30775c9d0f480126938c7}\label{CGImapper_8cpp_a0191a6cd20c30775c9d0f480126938c7}} 
+\#define {\bfseries F\+O\+Rd}(i,  a,  b)~for (int i = (b)-\/1; i $>$= a; i-\/-\/)
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a93d83c6f9e2b2dc7523b28e5aa77b5cf}\label{CGImapper_8cpp_a93d83c6f9e2b2dc7523b28e5aa77b5cf}} 
+\#define {\bfseries F0\+Rd}(i,  a)~for (int i = (a)-\/1; i $>$= 0; i-\/-\/)
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a8e7b6a92f58a7032f4ff4682d10024bb}\label{CGImapper_8cpp_a8e7b6a92f58a7032f4ff4682d10024bb}} 
+\#define {\bfseries sz}(x)~(int)(x).size()
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_aea466a7139309b17bce61d5ccb03e195}\label{CGImapper_8cpp_aea466a7139309b17bce61d5ccb03e195}} 
+\#define {\bfseries mp}~make\+\_\+pair
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a276c5a0e984cf60015b27252fe04fe6b}\label{CGImapper_8cpp_a276c5a0e984cf60015b27252fe04fe6b}} 
+\#define {\bfseries pb}~push\+\_\+back
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a7a51ed112e9b79f89e3e70beb8db8bf5}\label{CGImapper_8cpp_a7a51ed112e9b79f89e3e70beb8db8bf5}} 
+\#define {\bfseries f}~first
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ac9562ee4ecb3b8aeebeb04656e7e57a9}\label{CGImapper_8cpp_ac9562ee4ecb3b8aeebeb04656e7e57a9}} 
+\#define {\bfseries s}~second
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ace2edd29fb317368936179b2ebf1593d}\label{CGImapper_8cpp_ace2edd29fb317368936179b2ebf1593d}} 
+\#define {\bfseries lb}~lower\+\_\+bound
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a6bc7a7e1f4df4caac1de9b550fc2d291}\label{CGImapper_8cpp_a6bc7a7e1f4df4caac1de9b550fc2d291}} 
+\#define {\bfseries ub}~upper\+\_\+bound
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a9064c572b2b33295a5ca0950d4f8737e}\label{CGImapper_8cpp_a9064c572b2b33295a5ca0950d4f8737e}} 
+\#define {\bfseries all}(x)~x.\+begin(), x.\+end()
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a649842e78f219114435121a088c1bed2}\label{CGImapper_8cpp_a649842e78f219114435121a088c1bed2}} 
+typedef long long {\bfseries ll}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a09bfe86a130ac3370740e01ab26b8b48}\label{CGImapper_8cpp_a09bfe86a130ac3370740e01ab26b8b48}} 
+typedef long double {\bfseries ld}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a3d93059a120e3e66ea829a5e9b390b2b}\label{CGImapper_8cpp_a3d93059a120e3e66ea829a5e9b390b2b}} 
+typedef complex$<$ ld $>$ {\bfseries cd}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ab2d258915a6ae4870725f8f03232bbd9}\label{CGImapper_8cpp_ab2d258915a6ae4870725f8f03232bbd9}} 
+typedef pair$<$ int, int $>$ {\bfseries pi}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ae579e1803b4df0a591f7e2df0e1058dc}\label{CGImapper_8cpp_ae579e1803b4df0a591f7e2df0e1058dc}} 
+typedef pair$<$ ll, ll $>$ {\bfseries pl}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a76214b966a536ab7e6a7fb9880e95266}\label{CGImapper_8cpp_a76214b966a536ab7e6a7fb9880e95266}} 
+typedef pair$<$ ld, ld $>$ {\bfseries pd}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a2954e26aee7d16c4a58d5cfb5571ea7e}\label{CGImapper_8cpp_a2954e26aee7d16c4a58d5cfb5571ea7e}} 
+typedef vector$<$ int $>$ {\bfseries vi}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a002facb55564bdfcf3366794d0053886}\label{CGImapper_8cpp_a002facb55564bdfcf3366794d0053886}} 
+typedef vector$<$ ld $>$ {\bfseries vd}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a85a97efab023028a7325ada454492b46}\label{CGImapper_8cpp_a85a97efab023028a7325ada454492b46}} 
+typedef vector$<$ ll $>$ {\bfseries vl}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_aae56f699fb3af787468a6479a0e2ab29}\label{CGImapper_8cpp_aae56f699fb3af787468a6479a0e2ab29}} 
+typedef vector$<$ pi $>$ {\bfseries vpi}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a9838572b4e3a1ed8572015385295438b}\label{CGImapper_8cpp_a9838572b4e3a1ed8572015385295438b}} 
+typedef vector$<$ pl $>$ {\bfseries vpl}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_aef41792e7ad6b0f7b26b3f6ae148e284}\label{CGImapper_8cpp_aef41792e7ad6b0f7b26b3f6ae148e284}} 
+typedef vector$<$ cd $>$ {\bfseries vcd}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a8f810f7bf315b866bb2f0ca09d5d9076}\label{CGImapper_8cpp_a8f810f7bf315b866bb2f0ca09d5d9076}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries Tree} = tree$<$ T, null\+\_\+type, less$<$ T $>$, rb\+\_\+tree\+\_\+tag, tree\+\_\+order\+\_\+statistics\+\_\+node\+\_\+update $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structcpg}{cpg} $>$ \hyperlink{CGImapper_8cpp_aa440807f40548e3b92d99104a5cb80fc}{read\+Meth} (ifstream \&meth\+In, vector$<$ \hyperlink{structcpg}{cpg} $>$ \&cpg\+\_\+data)
+\item 
+vector$<$ \hyperlink{structcgi}{cgi} $>$ \hyperlink{CGImapper_8cpp_a4603b99d9219906d357c2632e13e2f9b}{read\+C\+GI} (ifstream \&infile, vector$<$ \hyperlink{structcgi}{cgi} $>$ \&cgi\+\_\+data)
+\item 
+vector$<$ \hyperlink{structcpg}{cpg} $>$ \hyperlink{CGImapper_8cpp_a266edb430dc344a59850992370b3e7bb}{get\+C\+P\+Gs} (\hyperlink{structcgi}{cgi} the\+\_\+cgi, vector$<$ \hyperlink{structcpg}{cpg} $>$ cpg\+\_\+data)
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{CGImapper_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_ae96357b9a42c7b21952378aea994d2e2}\label{CGImapper_8cpp_ae96357b9a42c7b21952378aea994d2e2}} 
+const int {\bfseries M\+OD} = 1000000007
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_adb478152e477a27ae0af1c2f8ceab12d}\label{CGImapper_8cpp_adb478152e477a27ae0af1c2f8ceab12d}} 
+const ll {\bfseries I\+NF} = 1e18
+\item 
+\mbox{\Hypertarget{CGImapper_8cpp_a4d31535442b857b3c54698e2adf2ddc8}\label{CGImapper_8cpp_a4d31535442b857b3c54698e2adf2ddc8}} 
+const int {\bfseries MX} = 100001
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Calculate Methlyation densities in C\+G\+Is (?)  do the above lol
+
+\begin{DoxyAuthor}{Author}
+Samyok Nepal 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1.\+3dev 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{CGImapper_8cpp_a266edb430dc344a59850992370b3e7bb}\label{CGImapper_8cpp_a266edb430dc344a59850992370b3e7bb}} 
+\index{C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}!get\+C\+P\+Gs@{get\+C\+P\+Gs}}
+\index{get\+C\+P\+Gs@{get\+C\+P\+Gs}!C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}}
+\subsubsection{\texorpdfstring{get\+C\+P\+Gs()}{getCPGs()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{structcpg}{cpg}$>$ get\+C\+P\+Gs (\begin{DoxyParamCaption}\item[{\hyperlink{structcgi}{cgi}}]{the\+\_\+cgi,  }\item[{vector$<$ \hyperlink{structcpg}{cpg} $>$}]{cpg\+\_\+data }\end{DoxyParamCaption})}
+
+Get all C\+P\+Gs in a certain C\+GI 
+\begin{DoxyParams}{Parameters}
+{\em the\+\_\+cgi} & The C\+G-\/\+Island \\
+\hline
+{\em cpg\+\_\+data} & The C\+PG data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of all the C\+P\+Gs in the given C\+GI. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{CGImapper_8cpp_a4603b99d9219906d357c2632e13e2f9b}\label{CGImapper_8cpp_a4603b99d9219906d357c2632e13e2f9b}} 
+\index{C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}!read\+C\+GI@{read\+C\+GI}}
+\index{read\+C\+GI@{read\+C\+GI}!C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}}
+\subsubsection{\texorpdfstring{read\+C\+G\+I()}{readCGI()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{structcgi}{cgi}$>$ read\+C\+GI (\begin{DoxyParamCaption}\item[{ifstream \&}]{infile,  }\item[{vector$<$ \hyperlink{structcgi}{cgi} $>$ \&}]{cgi\+\_\+data }\end{DoxyParamCaption})}
+
+Reads the C\+GI data into a readable vector. 
+\begin{DoxyParams}{Parameters}
+{\em infile} & Pointer to the C\+GI data. \\
+\hline
+{\em cgi\+\_\+data} & Pointer to vector to read into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cgi\+\_\+data, but it reads into it anyway. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structcgi}{cgi} 
+
+\hyperlink{CGImapper_8cpp_aa440807f40548e3b92d99104a5cb80fc}{read\+Meth} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{CGImapper_8cpp_aa440807f40548e3b92d99104a5cb80fc}\label{CGImapper_8cpp_aa440807f40548e3b92d99104a5cb80fc}} 
+\index{C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}!read\+Meth@{read\+Meth}}
+\index{read\+Meth@{read\+Meth}!C\+G\+Imapper.\+cpp@{C\+G\+Imapper.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Meth()}{readMeth()}}
+{\footnotesize\ttfamily vector$<$\hyperlink{structcpg}{cpg}$>$ read\+Meth (\begin{DoxyParamCaption}\item[{ifstream \&}]{meth\+In,  }\item[{vector$<$ \hyperlink{structcpg}{cpg} $>$ \&}]{cpg\+\_\+data }\end{DoxyParamCaption})}
+
+Reads the methyliation file into a readable vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em meth\+In} & The pointer to the ifstream(\+F\+I\+L\+E\+\_\+\+O\+F\+\_\+\+M\+E\+T\+H\+Y\+L\+I\+A\+T\+I\+O\+N) \\
+\hline
+{\em cpg\+\_\+data} & The vector of the data itself. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing data, although it should already be in cpg\+\_\+data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structcgi}{cgi} 
+
+\hyperlink{CGImapper_8cpp_a4603b99d9219906d357c2632e13e2f9b}{read\+C\+GI} 
+\end{DoxySeeAlso}
